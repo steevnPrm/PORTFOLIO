@@ -8,8 +8,8 @@ export class UserService implements IUserService {
     private readonly passwordService: PasswordService,
   ) {}
   async register(user: ILogin): Promise<UserEntity> {
-    const hash = await this.passwordService.hash(user.password)
-    const newUser = await this.repo.create(user , hash);
+    const hash = await this.passwordService.hash(user.password);
+    const newUser = await this.repo.create(user, hash);
     return new UserEntity(
       newUser.firstname,
       newUser.lastname,

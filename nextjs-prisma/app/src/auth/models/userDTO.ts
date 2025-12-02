@@ -26,7 +26,7 @@ export interface IUserContact extends IUserRegister {}
 export interface ILogin extends IUserRegister {}
 
 export interface IUserRepository {
-  create(data: IUserRegister , hash : string): Promise<UserEntity>;
+  create(data: IUserRegister, hash: string): Promise<UserEntity>;
   findByEmail(email: string): Promise<UserEntity>;
   findAll(): Promise<UserEntity[]>;
 }

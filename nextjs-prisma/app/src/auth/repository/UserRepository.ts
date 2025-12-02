@@ -2,14 +2,14 @@ import { IUserRegister, IUserRepository, UserEntity } from "../models/userDTO";
 import prisma from "@/app/lib/prisma";
 
 export class PrismaUserRepositoy implements IUserRepository {
-  async create(data: IUserRegister, hash : string): Promise<UserEntity> {
+  async create(data: IUserRegister, hash: string): Promise<UserEntity> {
     const addedUser = await prisma.user.create({
       data: {
         firstname: data.firstname,
         lastname: data.lastname,
         email: data.email,
         username: data.username,
-        password: hash
+        password: hash,
       },
     });
     return new UserEntity(
