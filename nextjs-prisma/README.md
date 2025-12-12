@@ -9,32 +9,32 @@ Le site présente mes services, mes compétences et une sélection de projets r�
 
 ## 🚀 Objectifs du projet
 
-* Présenter mon activité, mes services et mes réalisations.
-* Permettre aux visiteurs d’accéder rapidement aux informations essentielles.
-* Proposer une interface **responsive**, **performante** et **accessible (RGAA)**.
-* Assurer un backend minimal mais sécurisé grâce à **Prisma + API Routes**.
+- Présenter mon activité, mes services et mes réalisations.
+- Permettre aux visiteurs d’accéder rapidement aux informations essentielles.
+- Proposer une interface **responsive**, **performante** et **accessible (RGAA)**.
+- Assurer un backend minimal mais sécurisé grâce à **Prisma + API Routes**.
 
 ---
 
 ## 🧱 Fonctionnalités principales
 
-* Page d’accueil avec tagline + mise en avant de mes services.
-* Page “Services” détaillant mes prestations.
-* Page “Projets / Portfolio”.
-* Page Contact avec API d’envoi (Email ou DB selon config).
-* Responsive design (mobile-first).
-* Conformité RGAA :
+- Page d’accueil avec tagline + mise en avant de mes services.
+- Page “Services” détaillant mes prestations.
+- Page “Projets / Portfolio”.
+- Page Contact avec API d’envoi (Email ou DB selon config).
+- Responsive design (mobile-first).
+- Conformité RGAA :
+  - Structure sémantique
+  - Contraste correct
+  - Textes alternatifs
+  - Navigation clavier
 
-  * Structure sémantique
-  * Contraste correct
-  * Textes alternatifs
-  * Navigation clavier
-* Sécurité côté backend :
+- Sécurité côté backend :
+  - Prisma avec validations
+  - API Routes sécurisées
+  - Pas de données persos persistées sans consentement
 
-  * Prisma avec validations
-  * API Routes sécurisées
-  * Pas de données persos persistées sans consentement
-* Déploiement automatisé sur Vercel.
+- Déploiement automatisé sur Vercel.
 
 ---
 
@@ -42,21 +42,21 @@ Le site présente mes services, mes compétences et une sélection de projets r�
 
 ### **Frontend**
 
-* Next.js 14+ (App Router)
-* React 18
-* TailwindCSS
-* TypeScript
+- Next.js 14+ (App Router)
+- React 18
+- TailwindCSS
+- TypeScript
 
 ### **Backend**
 
-* Next.js API Routes
-* Prisma ORM
-* PostgreSQL (ou autre SGBD compatible)
+- Next.js API Routes
+- Prisma ORM
+- PostgreSQL (ou autre SGBD compatible)
 
 ### **Déploiement**
 
-* Vercel (CI/CD intégré)
-* Prisma Accelerate / Data Proxy (optionnel)
+- Vercel (CI/CD intégré)
+- Prisma Accelerate / Data Proxy (optionnel)
 
 ---
 
@@ -148,16 +148,15 @@ Activer **Prisma Data Proxy** ou **Accelerate** pour de meilleures perfs.
 
 ## 🔒 Notes sur la sécurité & RGPD
 
-* Aucune donnée personnelle n’est stockée sans consentement explicite.
-* Les messages du formulaire peuvent être :
+- Aucune donnée personnelle n’est stockée sans consentement explicite.
+- Les messages du formulaire peuvent être :
+  - soit envoyés par email uniquement,
+  - soit stockés (avec une durée maximale selon la CNIL).
 
-  * soit envoyés par email uniquement,
-  * soit stockés (avec une durée maximale selon la CNIL).
-* API sécurisée contre :
-
-  * injections SQL (Prisma protège nativement)
-  * spam (ratelimit possible via middleware)
-  * XSS et CSRF (gérés par Next.js)
+- API sécurisée contre :
+  - injections SQL (Prisma protège nativement)
+  - spam (ratelimit possible via middleware)
+  - XSS et CSRF (gérés par Next.js)
 
 ---
 
@@ -168,4 +167,3 @@ Pour toute suggestion ou amélioration :
 🌐 [https://mondomaine.com](https://mondomaine.com)
 
 ---
-

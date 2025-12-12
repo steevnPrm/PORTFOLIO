@@ -1,65 +1,95 @@
-import Image from "next/image";
+import ContactForm from "./src/frontend/components/ContactForm";
+import InformationCard from "./src/frontend/components/InformationCard";
+import ProductCard from "./src/frontend/components/ProductCards";
 
-export default function Home() {
+export default function Page() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <>
+      {/*HERO SECTION*/}
+      <section className="flex flex-col mx-10 sm:mx-30 pb-20">
+        <div className="flex justify-center py-30 px-2 ">
+          <h1 className="text-3xl sm:text-6xl text-vitrine-grey-100 text-center font-bold bg-vitrine-grey-100/10 p-2 rounded-2xl shadow-md whitespace-pre-line shadow-vitrine-red-500">
+            UN PRODUIT POUR CHAQUE BESOIN
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+        <div className="flex flex-col p-12 gap-12 justify-center bg-vitrine-grey-100/10 rounded-2xl shadow shadow-vitrine-grey-100">
+          <div className="flex justify-center">
+            <h2 className="text-2xl sm:text-4xl font-bold text-vitrine-grey-100 pt-2 text-shadow-vitrine-red-100-lg">
+              Produits proposés
+            </h2>
+          </div>
+          <div className="flex flex-col justify-center sm:flex-row gap-6">
+            <ProductCard
+              title={"Application web"}
+              description={
+                "Outils numériques réalisés sur mesure afin d’accroître votre productivité"
+              }
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            <ProductCard
+              title={"Développement d’API"}
+              description={
+                "Des API robustes et sécurisées pour connecter vos applications et automatiser vos processus."
+              }
+            />
+            <ProductCard
+              title={"Conception d’interface"}
+              description={
+                "Des interfaces intuitives et esthétiques, pensées pour offrir une expérience utilisateur fluide et engageante."
+              }
+            />
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+      {/*TARIFS SECTIONS*/}
+      <section className="flex flex-col mx-10 sm:mx-30 pb-20">
+        <div className="flex flex-col justify-center gap-12 p-12 bg-vitrine-grey-100/10 rounded-2xl shadow shadow-vitrine-grey-100">
+          <div className="flex justify-center">
+            <h2 className="text-2xl sm:text-4xl font-bold text-vitrine-grey-100 pt-2 text-shadow-vitrine-red-100-lg">
+              Tarifs forfaitaires
+            </h2>
+          </div>
+          <div className="flex gap-6 flex-col sm:justify-center sm:flex-row">
+            <ProductCard
+              title={"Page simple"}
+              description={"Page web statique ou simple avec design basique"}
+              price="200€/page"
+            />
+            <ProductCard
+              title={"API légère"}
+              description={
+                "API REST basique pour interagir avec votre front-end"
+              }
+              price="300€/composant + pages associées"
+            />
+            <ProductCard
+              title={"Module backend complet"}
+              description={
+                "Développement backend complet avec base de données et logique métier"
+              }
+              price="400€/module + pages associées"
+            />
+          </div>
+        </div>
+      </section>
+      {/*CONTACT SECTIONS*/}
+      <section className="flex flex-col sm:flex-row p-6 pb-20 mx-5">
+        <div className="sm:justify-around flex sm:flex-row gap-6 flex-col">
+          <div className="">
+            <ContactForm />
+          </div>
+          <div className="justify-items-end sm:max-w-1/3">
+            <InformationCard
+              title={"Informations et conditions générales d’utilisation"}
+              content_1={
+                "Remplissez ce formulaire et je vous répondrai sous 48h. Toutes vos informations restent confidentielles et ne seront utilisées que pour traiter votre demande."
+              }
+              content_2={
+                "Vos informations personnelles, y compris votre adresse e-mail, seront conservées uniquement pour la durée nécessaire au traitement de votre demande et au maximum 2 ans, conformément au RGPD. Vous pouvez à tout moment demander leur suppression ou leur modification."
+              }
+            />
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
